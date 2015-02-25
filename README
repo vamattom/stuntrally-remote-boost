@@ -1,2 +1,3 @@
-test
-test
+clone https://github.com/stuntrally/stuntrally
+modify source/vdrift/game.cpp and source/vdrift/game.h and recompile with -lzmq flag
+you will be able to give boost and breake remotely, here we send commands by simple python script
