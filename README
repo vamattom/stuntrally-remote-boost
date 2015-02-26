@@ -2,5 +2,6 @@ clone https://github.com/stuntrally/stuntrally
 modify source/vdrift/game.cpp and source/vdrift/game.h 
 void* custom_duty(void);                             +
 static void *custom_duty_helper(void *context);      +
-and recompile with -lzmqyou will be able to give boost and brake remotely,
+and recompile with -lzmq.
+this will enables you to give boost and brake remotely,
 here we send commands by simple python script
