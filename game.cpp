@@ -1019,8 +1019,6 @@ void* GAME::custom_duty(void){
             socket.recv (&request);
             std::cout << "Received Hello" << std::endl;
             std::string rpl = std::string(static_cast<char*>(request.data()), request.size());
-            // Do some 'work'
-            //sleep(1);
             // Send reply back to client
             zmq::message_t reply (2);
             memcpy ((void *) reply.data (), "OK", 2);
@@ -1049,8 +1047,7 @@ void* GAME::custom_duty(void){
     }
     return nothing;
 }
-void* GAME::custom_duty_helper(void *context)
-    {
+void* GAME::custom_duty_helper(void *context){
         return ((GAME *)context)->custom_duty();
-    }
+}
 
