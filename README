@@ -2,6 +2,8 @@ clone https://github.com/stuntrally/stuntrally
 modify source/vdrift/game.cpp and source/vdrift/game.h 
 void* custom_duty(void);                             +
 static void *custom_duty_helper(void *context);      +
+aslo in source/ogre/main.cpp:144:
+pthread_create( &t1, NULL, &GAME::custom_duty_helper,pGame); +
 and recompile with -lzmq.
 this will enables you to give boost and brake remotely,
 here we send commands by simple python script
